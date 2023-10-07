@@ -34,8 +34,4 @@ return transcript
 
 """
 
-# IF O IS TRUE: action items / querying transcript
-"""
-
-"""
 
