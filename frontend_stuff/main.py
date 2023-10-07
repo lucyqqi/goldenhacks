@@ -3,20 +3,24 @@ import pandas as pd
 import webbrowser
 import datetime
 
-# Section 1 is the top part of the webpage
 section_1="""
 <center>
 <|navbar|lov={[("page1", "This Page"), ("https://docs.taipy.io/en/latest/manuals/about/", "Taipy Docs"), ("https://docs.taipy.io/en/latest/getting_started/", "Getting Started")]}|>
-</center> 
+</center>
 
-eduscribe.ai
+Data Dashboard with Taipy
 =========================
 <|layout|columns=1 3|
 <|
-###description of how our website is changing the world and stuff
+###let's create a simple Data Dashboard!
 <br/> 
 <center>
 <|file_selector|label=Upload Dataset|>
+</center>
+|>
+<|
+<center>
+<|{logo}|image|height=250px|width=250px|on_action=image_action|>
 </center>
 |>
 |>
