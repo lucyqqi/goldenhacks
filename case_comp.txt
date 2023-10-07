@@ -1,0 +1,37 @@
+
+
+Good [morning/afternoon], esteemed panel of judges. 
+We are honored to present Eduscribe.ai, an innovative platform designed to empower students in their language learning journey 
+and promote diversity and inclusion in the hackathon community.
+
+
+At Eduscribe.ai, we've harnessed advanced technology to create a user-friendly platform 
+that facilitates audio transcription and summarization in English. 
+Our system employs automatic speech recognition and natural language processing for accurate transcriptions and succinct summaries. 
+Users also have the flexibility to edit and tailor summaries to their specific needs.
+
+
+In addition to transcription and summarization, Eduscribe.ai offers a robust translation feature. 
+Students can seamlessly translate their transcribed content into any language they prefer. 
+We've integrated machine translation services for precision and convenience, ensuring that language is no longer a barrier to accessing valuable educational content.
+
+
+
+What sets Eduscribe.ai apart is our integration of a state-of-the-art Large Language Model (LLM). 
+This LLM enables us to provide valuable insights from user questions related to the content. 
+Students can inquire, and Eduscribe.ai will deliver insightful answers, making learning and content understanding more accessible and efficient.
+
+
+Eduscribe.ai believes in the power of technology to transform education and bridge gaps.
+By offering transcription, summarization, translation, and insights, we empower students to access educational content more effectively. 
+We also strive to make learning accessible to diverse language communities, fostering inclusivity in the hackathon and educational space.
+
+
+In conclusion, Eduscribe.ai is not just a platform; it's a catalyst for change in the education and hackathon communities. 
+We're committed to making learning more accessible, promoting diversity and inclusion, and leveraging cutting-edge technology for educational advancement.
+We are excited to showcase Eduscribe.ai to you, our esteemed panel of judges. We believe in the positive impact this platform can have on students and the hackathon community. 
+Thank you for your attention, and we look forward to your valuable feedback and insights.
+This script provides a more comprehensive presentation of Eduscribe.ai while addressing a panel of judges and emphasizing the platform's potential impact on education and diversity.
+
+
+
