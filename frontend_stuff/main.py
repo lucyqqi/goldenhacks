@@ -8,7 +8,7 @@ section_1="""
 <|navbar|lov={[("page1", "This Page"), ("https://docs.taipy.io/en/latest/manuals/about/", "Taipy Docs"), ("https://docs.taipy.io/en/latest/getting_started/", "Getting Started")]}|>
 </center>
 
-Data Dashboard with Taipy
+Educational Video
 =========================
 <|layout|columns=1 3|
 <|
