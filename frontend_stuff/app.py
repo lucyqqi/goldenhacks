@@ -28,7 +28,9 @@ def demo():
     return render_template("demo.html", app_data=app_data)
 
 
-
+@app.route("/vision")
+def vision():
+    return render_template("vision.html", app_data=app_data)
 
 @app.route("/summary")
 def summary():
