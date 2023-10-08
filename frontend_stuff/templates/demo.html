@@ -31,6 +31,51 @@
         <br>
         <a class="btn btn-primary" href="/summary" role="button">Generate</a>
     </form>
+
+    <style>
+        /* Styles for the floating circles */
+        .floating-circle {
+            position: absolute; /* Keep the position as absolute */
+            border-radius: 50%;
+            animation: floatCircle 4s infinite;
+            opacity: 0.4; /* Lighter shade of blue (adjust opacity as needed) */
+            z-index: -1; /* Set a lower z-index to place the circles behind other elements */
+        
+        }
+    
+        /* Define different shades of blue for the circles */
+        .circle-1 {
+            background-color: #adc2e6; /* Light blue */
+            width: 30px;
+            height: 30px;
+        }
+    
+        .circle-2 {
+            background-color: #87ceeb; /* Lighter blue */
+            width: 50px;
+            height: 50px;
+        }
+    
+        .circle-3 {
+            background-color: #6886da; /* Steel blue */
+            width: 80px;
+            height: 80px;
+        }
+    
+        /* Keyframes for the floating animation */
+        @keyframes floatCircle {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+
 </center>
 
 <style>
