@@ -92,15 +92,9 @@
     </div>
 </div>
 
-<style>
-    body {
-        opacity: 1;
-        transition: opacity 0.5s ease-in-out;
-    }
 
-    body.fade-out {
-        opacity: 0;
-    }
+
+<style>
     /* Styles for the floating circles */
     .floating-circle {
         position: absolute; /* Keep the position as absolute */
@@ -143,8 +137,6 @@
         }
     }
 </style>
-
-    
 
 <script>
     const sentences = ["Empower learning.", "Transcribe audio.", "Summarize text."];
@@ -211,16 +203,8 @@
         createFloatingCircle();
     }
 
-    document.addEventListener("DOMContentLoaded", function () {
-        document.querySelector(".transition-link").addEventListener("click", function (e) {
-            e.preventDefault();
-            document.body.classList.add("fade-out");
-            setTimeout(function () {
-                window.location.href = e.target.href;
-            }, 500); // Adjust the delay to match the transition duration
-        });
-    });
 </script>
+
 
 {% endblock %}
 

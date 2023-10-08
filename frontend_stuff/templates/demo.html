@@ -30,9 +30,7 @@
         <br>
         <br>
         <a class="btn btn-primary transition-link" href="/summary" role="button">Generate</a>
-    </form>
-
-    
+     </form>
 
     <style>
         /* Styles for the floating circles */
@@ -80,16 +78,6 @@
 
 </center>
 
-<style>
-    body {
-        opacity: 1;
-        transition: opacity 0.5s ease-in-out;
-    }
-
-    body.fade-out {
-        opacity: 0;
-    }
-</style>
 <script>
     // Function to create and append floating circles
     function createFloatingCircle() {
@@ -118,15 +106,8 @@
     for (let i = 0; i < numberOfCircles; i++) {
         createFloatingCircle();
     }
-
-    document.addEventListener("DOMContentLoaded", function () {
-        document.querySelector(".transition-link").addEventListener("click", function (e) {
-            e.preventDefault();
-            document.body.classList.add("fade-out");
-            setTimeout(function () {
-                window.location.href = e.target.href;
-            }, 500); // Adjust the delay to match the transition duration
-        });
-    });
 </script>
+
+
+
 {% endblock %}
