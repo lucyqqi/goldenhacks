@@ -9,14 +9,14 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="/">Home
+          <a class="nav-link transition-link" href="/">Home
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/vision">Our Mission</a>
+          <a class="nav-link transition-link" href="/vision">Our Mission</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/demo">Demo</a>
+          <a class="nav-link transition-link" href="/demo">Demo</a>
         </li>
         
 
@@ -24,4 +24,15 @@
       </ul>
     </div>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".transition-link").addEventListener("click", function (e) {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(function () {
+                window.location.href = e.target.href;
+            }, 500); // Adjust the delay to match the transition duration
+        });
+    });
+</script>
 </nav>
