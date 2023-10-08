@@ -2,7 +2,7 @@
 
 # A Comprehensive Guide on eduscript.ai
 
-> VisionCraft is a new way to capture and analyze your hardware setup, unlocking a wealth of possibilities
+> eduscript.ai creates equitable global access to education, empowering us all, one file at a time.
 
 ## Project Statistics
 
