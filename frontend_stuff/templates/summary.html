@@ -9,11 +9,98 @@
 
 <div style="background-color: rgb(229, 231, 247); border-radius: 10px; padding: 20px; text-align: center; width: 80%">
     
-    <p style="font-weight: 300; text-align: left; padding: 10px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc pulvinar sapien et ligula ullamcorper. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique. Tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra. Eget sit amet tellus cras adipiscing enim eu. Aliquam malesuada bibendum arcu vitae elementum. Sit amet justo donec enim diam. Sit amet risus nullam eget felis eget nunc lobortis mattis. Sit amet consectetur adipiscing elit. Ornare arcu dui vivamus arcu felis. Integer eget aliquet nibh praesent tristique magna sit amet purus. Non tellus orci ac auctor. Vestibulum sed arcu non odio. Amet mattis vulputate enim nulla aliquet porttitor. Sagittis orci a scelerisque purus semper eget. Morbi blandit cursus risus at ultrices mi.</p>
+    <p style="font-weight: 300; text-align: left; padding: 10px">{{ app_data.summaryText }}</p>
 
     
 </div>
 
 </center>
 
+<style>
+    /* Styles for the floating circles */
+    .floating-circle {
+        position: absolute; /* Keep the position as absolute */
+        border-radius: 50%;
+        animation: floatCircle 4s infinite;
+        opacity: 0.4; /* Lighter shade of blue (adjust opacity as needed) */
+        z-index: -1; /* Set a lower z-index to place the circles behind other elements */
+    
+    }
+
+    /* Define different shades of blue for the circles */
+    .circle-1 {
+        background-color: #adc2e6; /* Light blue */
+        width: 40px;
+        height: 40px;
+    }
+
+    .circle-2 {
+        background-color: #87ceeb; /* Lighter blue */
+        width: 60px;
+        height: 60px;
+    }
+
+    .circle-3 {
+        background-color: #6886da; /* Steel blue */
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Keyframes for the floating animation */
+    @keyframes floatCircle {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-15px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+</style>
+
+
+
+<script>
+    // Function to create and append floating circles
+    function createFloatingCircle() {
+       const circle = document.createElement('div');
+       circle.classList.add('floating-circle');
+       const shadeClasses = ['circle-1', 'circle-2', 'circle-3'];
+       const randomShade = shadeClasses[Math.floor(Math.random() * shadeClasses.length)];
+       circle.classList.add(randomShade);
+
+       const screenWidth = document.documentElement.clientWidth;
+       const screenHeight = document.documentElement.scrollHeight;
+
+       // Position the circle randomly on the screen
+       const xPosition = Math.random() * screenWidth;
+       const yPosition = Math.random() * screenHeight;
+
+       circle.style.left = `${xPosition}px`;
+       circle.style.top = `${yPosition}px`;
+
+       document.body.appendChild(circle);
+
+   }
+
+   // Create a few circles (adjust the number as needed)
+   const numberOfCircles = 8; // Adjust this number to create the desired number of circles
+   for (let i = 0; i < numberOfCircles; i++) {
+       createFloatingCircle();
+   }
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".transition-link").addEventListener("click", function (e) {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(function () {
+                window.location.href = e.target.href;
+            }, 500); // Adjust the delay to match the transition duration
+        });
+    });
+</script>
 {% endblock %}
