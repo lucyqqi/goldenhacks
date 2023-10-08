@@ -39,7 +39,7 @@
               </div>
               <div class="card-body" style="font-weight: 300;">
                 <center>
-                    <p class="card-text">With the instant translation feature, you can improve your comprehension of any text or audio document.</p>
+                    <p class="card-text">With the instant translation feature, you can learn and improve your comprehension of any text or audio document.</p>
                   </center>
               </div>
           </div>
@@ -59,6 +59,84 @@
   </div>
 </div>
 <!-- End Three Column Cards -->
+
+<!-- Rounded Card with Image -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-3" style="border: 0px; border-radius: 15px; overflow: hidden;">
+                <img src="https://images.pexels.com/photos/5124910/pexels-photo-5124910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="Image" style="object-fit: cover; height: 300px;">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Rounded Card with Image -->
+
+<!-- Blue Card with White Text -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-3" style="background-color: rgb(229, 231, 247); border: 0px; border-radius: 15px;">
+                <div class="card-body" style="font-weight: 300; padding: 40px;">
+                    <center>
+                    <p class="card-text">
+                        Eduscribe.ai is compatible with both textual and auditory transcripts. EDAI transcribes audio into text or takes existing text, analyzes it then translates it into a target language.
+                    </p>
+                    <p class="card-text">
+                        Additional features include summarization and sentient analysis. Using these functions will make understanding your classes, documents, or anything else easier.
+                    </p>
+                </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Styles for the floating circles */
+    .floating-circle {
+        position: absolute; /* Keep the position as absolute */
+        border-radius: 50%;
+        animation: floatCircle 4s infinite;
+        opacity: 0.4; /* Lighter shade of blue (adjust opacity as needed) */
+        z-index: -1; /* Set a lower z-index to place the circles behind other elements */
+    
+    }
+
+    /* Define different shades of blue for the circles */
+    .circle-1 {
+        background-color: #add8e6; /* Light blue */
+        width: 30px;
+        height: 30px;
+    }
+
+    .circle-2 {
+        background-color: #87ceeb; /* Lighter blue */
+        width: 50px;
+        height: 50px;
+    }
+
+    .circle-3 {
+        background-color: #4682b4; /* Steel blue */
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Keyframes for the floating animation */
+    @keyframes floatCircle {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-15px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+</style>
+
+    
 
 <script>
     const sentences = ["Empower learning.", "Transcribe audio.", "Summarize text."];
@@ -96,6 +174,34 @@
       
     // Start the typewriter effect
     type();
+
+    // Function to create and append floating circles
+    function createFloatingCircle() {
+        const circle = document.createElement('div');
+        circle.classList.add('floating-circle');
+        const shadeClasses = ['circle-1', 'circle-2', 'circle-3'];
+        const randomShade = shadeClasses[Math.floor(Math.random() * shadeClasses.length)];
+        circle.classList.add(randomShade);
+
+        const screenWidth = document.documentElement.clientWidth;
+        const screenHeight = document.documentElement.scrollHeight;
+
+        // Position the circle randomly on the screen
+        const xPosition = Math.random() * screenWidth;
+        const yPosition = Math.random() * screenHeight;
+
+        circle.style.left = `${xPosition}px`;
+        circle.style.top = `${yPosition}px`;
+
+        document.body.appendChild(circle);
+
+    }
+
+    // Create a few circles (adjust the number as needed)
+    const numberOfCircles = 5; // Adjust this number to create the desired number of circles
+    for (let i = 0; i < numberOfCircles; i++) {
+        createFloatingCircle();
+    }
 </script>
 {% endblock %}
 
