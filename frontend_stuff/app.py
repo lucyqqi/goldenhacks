@@ -1,6 +1,10 @@
 from flask import Flask, render_template, request
+from backend import translate_audio_to_language
 
 DEVELOPMENT_ENV = True
+
+text_content = translate_audio_to_language()
+
 
 app = Flask(__name__)
 
@@ -11,6 +15,7 @@ app_data = {
     "html_title": "eduscribe.ai",
     "project_name": "eduscribe.ai",
     "keywords": "flask, webapp, template, basic",
+    "summaryText": text_content,
 }
 
 
