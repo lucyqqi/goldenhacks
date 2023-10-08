@@ -1,8 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-    <h1>{{ app_data['description'] }}</h1>
-
+<h1 class="display-4" style="background: linear-gradient(to right, lightblue, blue); font-size: 70px; -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: bold;">Educational Video</h1>
     <p class="lead">Enter the educational video you want to transcribe and summarize down below.</p>
 
     <form action="/process" method="POST" enctype="multipart/form-data">
