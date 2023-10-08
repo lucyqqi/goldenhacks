@@ -31,7 +31,6 @@ def demo():
 @app.route("/summary")
 def summary():
     text_content = translate_audio_to_language()
-    print(text_content)
     return render_template("summary.html", app_data={
     "name": "eduscribe.ai",
     "description": "Educational Video",
