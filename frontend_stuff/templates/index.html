@@ -12,7 +12,7 @@
     <p class="lead">A restorative language learning model used to create access to understanding textual and auditory documents, whenever and wherever.</p>
     
     <br>
-    <a class="btn btn-primary btn-lg" href="/demo" role="button">Demo</a>
+    <a class="btn btn-primary btn-lg transition-link" href="/demo" role="button">Demo</a>
    
   </center>
 </div>
@@ -93,6 +93,14 @@
 </div>
 
 <style>
+    body {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    body.fade-out {
+        opacity: 0;
+    }
     /* Styles for the floating circles */
     .floating-circle {
         position: absolute; /* Keep the position as absolute */
@@ -202,6 +210,17 @@
     for (let i = 0; i < numberOfCircles; i++) {
         createFloatingCircle();
     }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".transition-link").addEventListener("click", function (e) {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(function () {
+                window.location.href = e.target.href;
+            }, 500); // Adjust the delay to match the transition duration
+        });
+    });
 </script>
 {% endblock %}
 
