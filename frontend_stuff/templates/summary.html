@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1>{{ app_data['description'] }}</h1>
+
+    <p class="lead">Enter the educational video you want to transcribe and summarize down below.</p>
+
+    <form action="/process" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="videoUpload">Upload Audio:</label>
+            <input type="file" class="form-control" id="videoUpload" name="video">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="languageSelect">Select Language:</label>
+            <select class="form-control" id="languageSelect" name="language">
+                <option value="english">English</option>
+                <option value="french">French</option>
+                <option value="chinese">Chinese</option>
+            </select>
+        </div>
+
+        <br>
+        <button type="submit" class="btn btn-primary">Generate</button>
+    </form>
+{% endblock %}
