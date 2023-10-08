@@ -23,6 +23,9 @@ def index():
 def demo():
     return render_template("demo.html", app_data=app_data)
 
+@app.route("/summary")
+def summary():
+    return render_template("summary.html", app_data=app_data)
 
 if __name__ == "__main__":
     app.run(debug=DEVELOPMENT_ENV)
