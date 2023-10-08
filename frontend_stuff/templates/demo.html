@@ -1,25 +1,32 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-<h1 class="display-4" style="background: linear-gradient(to right, lightblue, blue); font-size: 70px; -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: bold;">Educational Video</h1>
+<center>
+<h1 class="display-4" style="background: linear-gradient(to right, lightblue, blue); font-size: 70px; -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: bold;">educational video</h1>
     <p class="lead">Enter the educational video you want to transcribe and summarize down below.</p>
 
+    <br>
+    
     <form action="/process" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label for="videoUpload">Upload Audio:</label>
-            <input type="file" class="form-control" id="videoUpload" name="video">
+            <input type="file" style="width: 30%" class="form-control" id="videoUpload" name="video">
         </div>
         <br>
         <div class="form-group">
             <label for="languageSelect">Select Language:</label>
-            <select class="form-control" id="languageSelect" name="language">
-                <option value="english">English</option>
-                <option value="french">French</option>
+            
+            <select class="form-control" id="languageSelect" name="language" style="width: 30%; font-weight: 300px; text-align: center;">
+                <option value="english" style="text-align: center; font-weight: 300;">English</option>
+                <option value="french"> French</option>
                 <option value="chinese">Chinese</option>
+
             </select>
-        </div>
+        </div>        
+    
 
         <br>
         <a class="btn btn-primary" href="/summary" role="button">Generate</a>
     </form>
+</center>
 {% endblock %}
