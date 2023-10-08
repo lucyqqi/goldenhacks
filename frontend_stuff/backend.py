@@ -1,5 +1,5 @@
 import assemblyai as aai
-from secret_case import API_TOKEN
+from frontend_stuff.secret_case import API_TOKEN
 from deep_translator import GoogleTranslator
 
 def translate_audio_to_language():
