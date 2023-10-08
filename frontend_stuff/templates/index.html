@@ -3,14 +3,88 @@
 {% block body %}
 <div class="jumbotron">
     <center>
-    <h1 class="display-4">eduscribe.ai</h1>
-    <p class="lead">A restorative language learning model used to create access to understanding textual and auditory documents, whenever and wherever. </p>
-  
+    <h1 class="display-4" style="background: linear-gradient(to right, lightblue, blue); font-size: 110px; -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: bold;">eduscribe.ai</h1>
 
-    <hr class="my-4">
-    <p>eduscribe.ai is compatible with both textual and auditory transcripts. It transcribes audio into text or takes existing text, analyzes it then translates it into a target language.</p>
-  
-    <a class="btn btn-primary btn-lg" href="/about" role="button">Demo</a>
+    <div class="typewriter-container" style="height: 50px; padding: 0px; border-collapse: collapse; margin: 0px;"> 
+        <p id="typewriter-text" style="font-size: 24px; padding: 0px; border-collapse: collapse; margin: 0px;"></p>
+    </div>
+
+
+    <p class="lead" >A restorative language learning model used to create access to understanding textual and auditory documents, whenever and wherever. </p>
+    
+    <br>
+    <a class="btn btn-primary btn-lg" href="/demo" role="button">Demo</a>
+   
   </center>
+</div>
+
+<!-- Three Column Cards -->
+<div class="container mt-5">
+  <div class="row">
+      <div class="col-md-4">
+          <div class="card mb-3">
+              <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="Placeholder Image">
+              <div class="card-body">
+                  <p class="card-text">Card 1 Text</p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="card mb-3">
+              <img src="placeholder_image.jpg" class="card-img-top" alt="Placeholder Image">
+              <div class="card-body">
+                  <p class="card-text">Card 2 Text</p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="card mb-3">
+              <img src="placeholder_image.jpg" class="card-img-top" alt="Placeholder Image">
+              <div class="card-body">
+                  <p class="card-text">Card 3 Text</p>
+              </div>
+          </div>
+      </div>
   </div>
+</div>
+<!-- End Three Column Cards -->
+
+<script>
+    const sentences = ["Empower learning.", "Transcribe audio.", "Summarize text."];
+    const typewriterText = document.getElementById("typewriter-text");
+
+    let sentenceIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+        if (sentenceIndex < sentences.length) {
+            if (charIndex < sentences[sentenceIndex].length) {
+                typewriterText.innerHTML += sentences[sentenceIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 100);
+            } else {
+                // Move to the next sentence after 2 seconds
+                setTimeout(erase, 2000);
+            }
+        }
+    }
+
+    function erase() {
+        if (charIndex > 0) {
+            typewriterText.innerHTML = sentences[sentenceIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, 50);
+        } else {
+            sentenceIndex++;
+            if (sentenceIndex >= sentences.length) {
+                sentenceIndex = 0; // Restart the loop
+            }
+            setTimeout(type, 500);
+        }
+    }
+      
+    // Start the typewriter effect
+    type();
+</script>
 {% endblock %}
+
