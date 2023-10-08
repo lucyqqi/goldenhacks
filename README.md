@@ -1,8 +1,8 @@
 # Submitted to GoldenHack 5.0
 
-# A Comprehensive Guide on eduscript.ai
+# A Comprehensive Guide on eduscribe.ai
 
-> eduscript.ai creates equitable global access to education, empowering us all, one file at a time.
+> eduscribe.ai creates equitable global access to education, empowering us all, one file at a time.
 
 ## Project Statistics
 
