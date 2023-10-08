@@ -9,29 +9,36 @@ FILE_URL = "https://github.com/AssemblyAI-Examples/audio-examples/raw/main/20230
 transcriber = aai.Transcriber()
 transcript = transcriber.transcribe(FILE_URL)
 
-# IF X IS TRUE: basic summarry 
-"""
+# IF X IS TRUE: summarizer
+
 params = {
     "context": "There was a fire",
     "answer_format": "Bullet points"
-    result = transcript.lemur.summarize(**params)
 }
-"""
 
-# IF Y IS TRUE: Translate to selected language
-"""
+result = transcript.lemur.summarize(**params)
 
 to_translate = result.response
 
-translated = GoogleTranslator(source='auto', target='fr').translate(to_translate)
+translated = GoogleTranslator(source='auto', target='zh-CN').translate(to_translate)
 
+
+# Read
+"""
+with open("output.html", "r", encoding="utf-8") as file:
+    html_content = file.read()
 """
 
-# IF Z IS TRUE: basic transcription
+
+# Replace 
+"""
+html_content = html_content.replace("%TRANSLATED_TEXT%", translated)
 """
 
-return transcript
 
+# Write
 """
-
+with open("output.html", "w", encoding="utf-8") as file:
+    file.write(html_content)
+"""
 
