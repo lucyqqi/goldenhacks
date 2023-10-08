@@ -28,6 +28,8 @@ def demo():
     return render_template("demo.html", app_data=app_data)
 
 
+
+
 @app.route("/summary")
 def summary():
     #text_content = translate_audio_to_language()
