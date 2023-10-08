@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 DEVELOPMENT_ENV = True
 
@@ -22,8 +22,6 @@ def index():
 @app.route("/demo")
 def demo():
     return render_template("demo.html", app_data=app_data)
-
-
 
 
 if __name__ == "__main__":
