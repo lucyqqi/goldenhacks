@@ -92,4 +92,15 @@
    }
 </script>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".transition-link").addEventListener("click", function (e) {
+            e.preventDefault();
+            document.body.classList.add("fade-out");
+            setTimeout(function () {
+                window.location.href = e.target.href;
+            }, 500); // Adjust the delay to match the transition duration
+        });
+    });
+</script>
 {% endblock %}
