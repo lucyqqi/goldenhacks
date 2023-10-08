@@ -11,6 +11,9 @@ app_data = {
     "name": "eduscribe.ai",
     "description": "Educational Video",
     "author": "Peter Simeth",
+    "demo_text": "demo",
+    "summary_text": "summary",
+    "vision_text": "vision",
     "html_title": "eduscribe.ai",
     "project_name": "eduscribe.ai",
     "keywords": "flask, webapp, template, basic",
@@ -27,6 +30,10 @@ def index():
 def demo():
     return render_template("demo.html", app_data=app_data)
 
+
+@app.route("/vision")
+def vision():
+    return render_template("vision.html", app_data=app_data)
 
 @app.route("/summary")
 def summary():

@@ -1,0 +1,159 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<center>
+<h1 class="display-4" style="background: linear-gradient(to right, lightblue, blue); font-size: 70px; -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: bold;">vision</h1>
+   
+<!-- Blue Card with White Text -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-3" style="background-color: rgb(229, 231, 247); border: 0px; border-radius: 15px;">
+                <div class="card-body" style="font-weight: 300; padding: 40px;">
+                    <center>
+                    <p class="card-text">
+                        At eduscribe.ai, we understand that the language barrier is a real challenge for many people. Therefore, our mission is to bridge the gap between different languages and ensure that everyone has equal access to information. With eduscribe.ai, you can improve your comprehension of any document, even if you are struggling with a new language.
+                    </p>
+                    
+                </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+           
+                <div class="card mb-3" style="font-weight: 300">
+                    <center>
+                        <!-- Slideshow Container -->
+                        <div class="slideshow-container" style="max-width: 100%;">
+                            <div class="mySlides">
+                                <img src="https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="width: 100%; height: auto;">
+                            </div>
+                            <div class="mySlides">
+                                <img src="https://images.pexels.com/photos/5408919/pexels-photo-5408919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="width: 100%; height: auto;">
+                            </div>
+                            <div class="mySlides">
+                                <img src="https://images.pexels.com/photos/247819/pexels-photo-247819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style="width: 100%; height: auto;">
+                            </div>
+                        </div>
+                    </center>
+                    
+                </div>
+          
+        </div>
+    </div>
+</div>
+
+ 
+
+
+
+    <style>
+        /* Styles for the floating circles */
+        .floating-circle {
+            position: absolute; /* Keep the position as absolute */
+            border-radius: 50%;
+            animation: floatCircle 4s infinite;
+            opacity: 0.4; /* Lighter shade of blue (adjust opacity as needed) */
+            z-index: -1; /* Set a lower z-index to place the circles behind other elements */
+        
+        }
+    
+        /* Define different shades of blue for the circles */
+        .circle-1 {
+            background-color: #adc2e6; /* Light blue */
+            width: 30px;
+            height: 30px;
+        }
+    
+        .circle-2 {
+            background-color: #87ceeb; /* Lighter blue */
+            width: 50px;
+            height: 50px;
+        }
+    
+        .circle-3 {
+            background-color: #6886da; /* Steel blue */
+            width: 80px;
+            height: 80px;
+        }
+    
+        /* Keyframes for the floating animation */
+        @keyframes floatCircle {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+</center>
+
+<style>
+    body {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    body.fade-out {
+        opacity: 0;
+    }
+</style>
+<script>
+     // JavaScript for the image slideshow
+     let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        const slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change image every 5 seconds
+    }
+
+    // Function to create and append floating circles
+    function createFloatingCircle() {
+        const circle = document.createElement('div');
+        circle.classList.add('floating-circle');
+        const shadeClasses = ['circle-1', 'circle-2', 'circle-3'];
+        const randomShade = shadeClasses[Math.floor(Math.random() * shadeClasses.length)];
+        circle.classList.add(randomShade);
+
+        const screenWidth = document.documentElement.clientWidth;
+        const screenHeight = document.documentElement.scrollHeight;
+
+        // Position the circle randomly on the screen
+        const xPosition = Math.random() * screenWidth;
+        const yPosition = Math.random() * screenHeight;
+
+        circle.style.left = `${xPosition}px`;
+        circle.style.top = `${yPosition}px`;
+
+        document.body.appendChild(circle);
+
+    }
+
+    // Create a few circles (adjust the number as needed)
+    const numberOfCircles = 5; // Adjust this number to create the desired number of circles
+    for (let i = 0; i < numberOfCircles; i++) {
+        createFloatingCircle();
+    }
+
+</script>
+{% endblock %}
